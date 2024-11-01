@@ -4,8 +4,6 @@ Welcome to the Medidata Project! This initiative, part of the Advanced Database 
 
 ## Project Overview
 
-
-
 ## Features
 
 - Integration of advanced data analysis techniques such as Logistics regression and support vector classification.
@@ -22,7 +20,6 @@ Welcome to the Medidata Project! This initiative, part of the Advanced Database 
 3. Run the Medidata.py file to start the application.
 4. Explore the user-friendly interface to access analysis results and insights.
 5. Customize analysis by selecting different filters and parameters.
-
 
 ## Run Locally
 
@@ -54,8 +51,8 @@ Start the server
   streamlit run Medidata.py
 ```
 
-
 ## Datasets
+
 1. [Disease and Symptoms dataset](https://www.kaggle.com/datasets/choongqianzheng/disease-and-symptoms-dataset/data)
 2. [DATA at WHO](https://platform.who.int/mortality/themes/theme-details/MDB/all-causes)
 

@@ -230,7 +230,7 @@ if not df.empty:
             if os.path.exists(f'./who_dataset/{prediction}.csv'):
                 who_df = pd.read_csv(f'./who_dataset/{prediction}.csv')
 
-                # Create a Streamlit app
+               # Create a Streamlit app
                 st.title("Death Rate Analysis")
 
                 # Add a selectbox to select the region
@@ -247,19 +247,33 @@ if not df.empty:
                 # Filter data for the selected Sex
                 Sex_data = region_data[region_data['Sex'] == selected_Sex]
 
+                # Ensure Year column is of integer type for proper range handling
+                Sex_data['Year'] = Sex_data['Year'].astype(int)
+
                 # Add a slider to select a range of years
-                year_range = st.slider("Select year range:", min_value=Sex_data['Year'].min(), max_value=Sex_data['Year'].max(), value=(Sex_data['Year'].min(), Sex_data['Year'].max()))
+                min_year = int(Sex_data['Year'].min())
+                max_year = int(Sex_data['Year'].max())
+
+                year_range = st.slider(
+                    "Select year range:",
+                    min_value=min_year,
+                    max_value=max_year,
+                    value=(min_year, max_year)
+                )
+
+                # Filter data based on selected year range
                 filtered_data = Sex_data[(Sex_data['Year'] >= year_range[0]) & (Sex_data['Year'] <= year_range[1])]
 
                 # Create a line graph with the filtered data
-                st.write("Number of deaths per year in ", selected_region, " for ", selected_Sex, " from ", year_range[0], " to ", year_range[1])
+                st.write(f"Number of deaths per year in {selected_region} for {selected_Sex} from {year_range[0]} to {year_range[1]}")
                 st.line_chart(data=filtered_data, x='Year', y='Number')
-            else:
-                print(f"No data exist for {prediction}. ")
 
-            predetermined_question = f"What is the timeline for different age groups to recover from {prediction} in tabluar format?"
-            st.title("Recovery Timings")
-            
+                # Handling the predetermined question section
+                predetermined_question = f"What is the timeline for different age groups to recover from {prediction} in tabular format?"
+                st.title("Recovery Timings")
+
+            # Display the predetermined question
+            st.write(predetermined_question)
             # Send the predetermined question and get the response
             if 'chat' in st.session_state:
                 if st.session_state.last_response:
