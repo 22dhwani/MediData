@@ -1,18 +1,21 @@
-# MediData
+#MediData
 
-Welcome to the Medidata Project! This initiative, part of the Advanced Database Topics course, addresses disease prediction over variety of symptoms, using advanced data analysis methods.
+Welcome to the MediData Project! This initiative, part of the Advanced Database Topics course, focuses on disease prediction based on a variety of symptoms using advanced data analysis techniques.
 
 Project Overview
+
 Features
-Integration of advanced data analysis techniques such as Logistics regression and support vector classification.
-Utilization of Gemini AI for textual insights and recommendations.
-Examination of 40 diseases to uncover hidden patterns and predict disease based on symptoms.
-User-friendly interface empowering stakeholders to devise targeted interventions.
-Visualization of results to highlight global disease trends and death patterns.
-Access to various datasets for analysis.
+
+Advanced Analysis Techniques: Implementations of logistic regression and support vector classification.
+Gemini AI Integration: Leveraging AI for insightful textual analysis and recommendations.
+Disease Examination: Analysis of 40 diseases to uncover hidden patterns and predict conditions based on symptoms.
+User-Friendly Interface: Empowering stakeholders to develop targeted interventions.
+Data Visualization: Highlighting global disease trends and mortality patterns.
+Diverse Datasets: Access to various datasets for comprehensive analysis.
+
 How to Use
 Clone the repository to your local machine.
-Install the necessary dependencies specified in the requirements.txt file.
-Run the Medidata.py file to start the application.
-Explore the user-friendly interface to access analysis results and insights.
-Customize analysis by selecting different filters and parameters.
+Install the necessary dependencies listed in requirements.txt.
+Run the MediData.py file to launch the application.
+Explore the intuitive interface to access analysis results and insights.
+Customize your analysis by selecting different filters and parameters.
