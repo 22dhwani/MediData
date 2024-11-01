@@ -1,4 +1,4 @@
-#MediData
+#medidata
 
 Welcome to the MediData Project! This initiative, part of the Advanced Database Topics course, focuses on disease prediction based on a variety of symptoms using advanced data analysis techniques.
 
